@@ -177,6 +177,7 @@ const App = () => {
           onChange={handleInputChange}
           placeholder="Phone Number"
         />
+        <br/>
         {errors.mobilenumber && <p className="error">{errors.mobilenumber}</p>}
         <label className="form-heading">Preferred food type</label>
         <div className="foodtypewrapper">
