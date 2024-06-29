@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, ChangeEvent, FormEvent } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import poster from "./assets/poster.jpeg";
 import {
   getFirestore,
   collection,
@@ -126,7 +127,7 @@ const App = () => {
     <div className="container">
       <h1 className="heading">Future in Commerce</h1>
       <p className="para">Registration Portal</p>
-      <img src="./assets/poster.jpeg" alt="poster1" />
+      <img src={poster} alt="poster1" />
       <h4 className="form-heading">Please fill this form</h4>
       <form onSubmit={handleSubmit}>
         <input
