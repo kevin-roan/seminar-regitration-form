@@ -180,7 +180,7 @@ const App = () => {
         {errors.mobilenumber && <p className="error">{errors.mobilenumber}</p>}
         <label className="form-heading">Preferred food type</label>
         <div className="foodtypewrapper">
-          <label>
+          <label className="label_wrapper">
             Vegetarian
             <input
               type="radio"
@@ -190,7 +190,7 @@ const App = () => {
               onChange={handleInputChange}
             />
           </label>
-          <label>
+          <label className="label_wrapper">
             Non-Vegetarian
             <input
               type="radio"

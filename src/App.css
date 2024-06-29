@@ -74,14 +74,17 @@ h4 {
   width: 90%;
   border-radius: 10px;
   background-color: #f1f1f1;
+  margin: 10px;
   color: gray;
 }
 
 .feeinfo {
   margin: 10px;
 }
-input:focus {
-  border: none;
+
+.label_wrapper {
+  display: flex;
+  gap: 1rem;
 }
 
 @media screen and (min-width: 1270px) {
