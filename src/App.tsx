@@ -8,7 +8,6 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
-import { firebaseConfig } from "./firebaseConfig"; // Make sure you have your firebase config in this file
 
 export const app = initializeApp({
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -45,6 +44,8 @@ const App = () => {
     foodType: "",
     age: "",
   });
+
+  console.log(paymentId);
 
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
