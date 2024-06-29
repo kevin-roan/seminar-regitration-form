@@ -19,8 +19,6 @@ export const app = initializeApp({
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 });
 
-console.log("apikey", import.meta.env.VITE_FIREBASE_PROJECT_ID);
-
 export const analytics = getAnalytics(app);
 export const db = getFirestore(app);
 
