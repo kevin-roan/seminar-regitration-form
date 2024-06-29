@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: #4a669c;
+}
+.para {
+  font-weight: 300;
+  color: #4a669c;
+  margin: 3px 0px;
+}
+img {
+  border-radius: 10px;
+  height: 50%;
+  width: 90%;
+  margin: 10px;
+}
+
+.textinput {
+  padding: 1rem;
+  border-radius: 10px;
+  width: 90%;
+  margin: 10px;
+  background-color: #f1f1f1;
+}
+
+.paybutton {
+  color: white;
+  background-color: #4a669c;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 90%;
+  margin: 10px;
+}
+.info {
+  color: #adadad;
+  font-weight: 400;
+  padding: 10px;
+  font-size: 12px;
+  max-width: 90%;
+}
+
+.form-heading {
+  color: #4a669c;
+  margin: 10px;
+  font-weight: semibold;
+  align-self: flex-start;
+}
+.labelheading {
+  color: #bebebe;
+  align-self: flex-start;
+}
+h4 {
+  color: #4a669c;
+  font-weight: bold;
+}
+.foodtypewrapper {
+  gap: 2rem;
+  display: flex;
+  align-self: flex-start;
+  color: gray;
+  margin: 0 20px;
+}
+
+.qualification {
+  padding: 1rem;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  color: gray;
+}
+
+.feeinfo {
+  margin: 10px;
+}
+input:focus {
+  border: none;
+}
+
+@media screen and (min-width: 1270px) {
+  body {
+    .container {
+      display: flex;
+    }
+    img {
+      height: 30rem;
+      width: 30rem;
+    }
+  }
+}
