@@ -33,7 +33,7 @@ interface FormData {
 }
 
 const App = () => {
-  const [paymentId, setPaymentId] = useState<string | undefined>();
+  // const [paymentId, setPaymentId] = useState<string | undefined>();
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
@@ -43,8 +43,6 @@ const App = () => {
     foodType: "",
     age: "",
   });
-
-  // console.log(paymentId);
 
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -95,34 +93,34 @@ const App = () => {
     }
   };
 
-  const handlePayment = () => {
-    const options = {
-      key: import.meta.env.VITE_RAZORPAY_KEY_ID,
-      key_secret: import.meta.env.VITE_RAZORPAY_KEY_SECRET,
-      amount: 9900,
-      currency: "INR",
-      name: "Adacode Solutions",
-      description: "Future in commerce program",
-      handler: function (response: any) {
-        alert("Payment Successful: " + response.razorpay_payment_id);
-        setPaymentId(response.razorpay_payment_id);
-        handleUserdata();
-      },
-      prefill: {
-        name: formData.fullName,
-        email: formData.email,
-        contact: formData.mobilenumber,
-      },
-      notes: {
-        address: "Razorpay Corporate office",
-      },
-      theme: {
-        color: "#4A669C",
-      },
-    };
-    const pay = new (window as any).Razorpay(options);
-    pay.open();
-  };
+  // const handlePayment = () => {
+  //   const options = {
+  //     key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+  //     key_secret: import.meta.env.VITE_RAZORPAY_KEY_SECRET,
+  //     amount: 9900,
+  //     currency: "INR",
+  //     name: "Adacode Solutions",
+  //     description: "Future in commerce program",
+  //     handler: function (response: any) {
+  //       alert("Payment Successful: " + response.razorpay_payment_id);
+  //       setPaymentId(response.razorpay_payment_id);
+  //       handleUserdata();
+  //     },
+  //     prefill: {
+  //       name: formData.fullName,
+  //       email: formData.email,
+  //       contact: formData.mobilenumber,
+  //     },
+  //     notes: {
+  //       address: "Razorpay Corporate office",
+  //     },
+  //     theme: {
+  //       color: "#4A669C",
+  //     },
+  //   };
+  //   const pay = new (window as any).Razorpay(options);
+  //   pay.open();
+  // };
 
   return (
     <div className="container">
