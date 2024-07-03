@@ -44,7 +44,7 @@ const App = () => {
     age: "",
   });
 
-  console.log(paymentId);
+  // console.log(paymentId);
 
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -74,7 +74,8 @@ const App = () => {
       });
       return;
     }
-    handlePayment();
+    // handlePayment();
+    handleUserdata();
   };
 
   const handleUserdata = async () => {
@@ -128,8 +129,16 @@ const App = () => {
       <h1 className="heading">Future in Commerce</h1>
       <p className="para">Registration Portal</p>
       <img src={poster} alt="poster1" />
-      <h4 className="form-heading">Please fill this form</h4>
-      <form onSubmit={handleSubmit}>
+      <h4 className="form-heading mx-6">Please fill this form</h4>
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          justifyContent: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <input
           className="textinput"
           type="text"
@@ -177,38 +186,13 @@ const App = () => {
           onChange={handleInputChange}
           placeholder="Phone Number"
         />
-        <br/>
+        <br />
         {errors.mobilenumber && <p className="error">{errors.mobilenumber}</p>}
-        <label className="form-heading">Preferred food type</label>
-        <div className="foodtypewrapper">
-          <label className="label_wrapper">
-            Vegetarian
-            <input
-              type="radio"
-              name="foodType"
-              value="Vegetarian"
-              checked={formData.foodType === "Vegetarian"}
-              onChange={handleInputChange}
-            />
-          </label>
-          <label className="label_wrapper">
-            Non-Vegetarian
-            <input
-              type="radio"
-              name="foodType"
-              value="Non-Vegetarian"
-              checked={formData.foodType === "Non-Vegetarian"}
-              onChange={handleInputChange}
-            />
-          </label>
-        </div>
-        <h4 className="feeinfo">Entry Fee: Rs. 99 Only</h4>
         <p className="info">
-          To participate in our upcoming seminar an entry fee of 99 Rupees will
-          be charged. Secure your spot today to gain valuable insights and
-          knowledge from our expert speakers.
+          Secure your spot today to gain valuable insights and knowledge from
+          our expert speakers, and take your commerce skills to the next level!
         </p>
-        <input className="paybutton" type="submit" value="Pay and Proceed" />
+        <input className="paybutton" type="submit" value="Submit" />
       </form>
       <p className="info">*Secure Payment with Razorpay</p>
     </div>
