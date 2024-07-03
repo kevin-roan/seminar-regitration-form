@@ -88,6 +88,9 @@ const App = () => {
         age: formData.age,
       });
       console.log("Data Successfully submitted", docRef.id);
+      window.alert(
+        "Registration successful! Thank you for securing your spot at our commerce seminar. We look forward to seeing you there!",
+      );
     } catch (error) {
       console.error("Error saving Data", error);
     }
@@ -190,9 +193,17 @@ const App = () => {
           Secure your spot today to gain valuable insights and knowledge from
           our expert speakers, and take your commerce skills to the next level!
         </p>
-        <input className="paybutton" type="submit" value="Submit" />
+        <input
+          className="paybutton"
+          type="submit"
+          value="Submit"
+          style={{ transition: "ease-in-out" }}
+        />
       </form>
-      <p className="info">*Secure Payment with Razorpay</p>
+      <p className="info text-center">
+        *Your data is secure with us and will not be shared with any third
+        parties.
+      </p>
     </div>
   );
 };
